@@ -16,6 +16,16 @@ var copyArr = _utils_exc._copy_arr;
 var sprintf = _utils_exc._sprintf;
 
 
+function printf(format) {
+   var arg_lst = [format];
+   for (var i = 1; i < arguments.length; i++)
+      arg_lst.push(arguments[i]);
+
+   var oNew = Object.create(sprintf.prototype);
+   var formatted = sprintf.apply(oNew, arg_lst);
+   console.log(formatted);
+}
+
 function getRandom(min, max) {
    //return Math.round((Math.random() * 100000)) % (max + 1)
    var random = Math.random();
@@ -229,7 +239,9 @@ _Utils.prototype.contains = contains;
 _Utils.prototype.flatten = flatten;
 _Utils.prototype.copyArr = copyArr;
 _Utils.prototype.sprintf = sprintf;
+
 //functions defined in this file
+_Utils.prototype.printf = printf;
 _Utils.prototype.getRandom = getRandom;
 _Utils.prototype.range = range;
 _Utils.prototype.charRange = charRange;
