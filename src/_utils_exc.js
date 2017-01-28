@@ -11,14 +11,14 @@ function _isArr(arr) {
 
 function _map(lst, f) {
    var ret = [];
-   for (x in lst)
+   for (var x in lst)
       ret.push(f(lst[x]));
    return ret;
 }
 
 function _filter(lst, test) {
    var ret = [];
-   for (x in lst) {
+   for (var x in lst) {
       if (test(lst[x]))
          ret.push(lst[x]);
    }
