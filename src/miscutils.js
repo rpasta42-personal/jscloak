@@ -1,5 +1,6 @@
 
-var serv_url = root;
+
+var serv_url = null;
 
 function set_serv_url(new_url) {
    serv_url = new_url;
