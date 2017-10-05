@@ -1,5 +1,12 @@
 # jscloak
 
+### nodejs:
+- `npm install jscloak`
+
+### Browser:
+- `npm install -g browserify`
+- `cd src; browserify main.js -o jscloak.bundle.js`
+
 ICLOAK Common Javascript Tools Library
 
 [![Build Status](https://travis-ci.org/KostyaKow/jscloak.svg?branch-master)](https://travis-ci.org/KostyaKow/jscloak)

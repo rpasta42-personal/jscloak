@@ -213,6 +213,7 @@ function formatName(first, last, missing_prepend) {
    return fullName.trim();
 }
 
+const jutils = require('../src/utils.js');
 
 var _filterNumsFromStr_nums = '1234567890.'.split('');
 function filterNumsFromStr(str) {
@@ -418,7 +419,7 @@ var BuzUtils = new _BuzUtils();
 
    if (inNode()) {
       //module.exports.func = func;
-      moule.exports = BuzUtils;
+      module.exports = BuzUtils;
       root.BuzUtils = BuzUtils;
    }
    else {
