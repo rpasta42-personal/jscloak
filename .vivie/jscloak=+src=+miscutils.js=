@@ -2,7 +2,7 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 setlocal keymap=
 setlocal noarabic
-setlocal autoindent
+setlocal noautoindent
 setlocal backupcopy=
 setlocal nobinary
 setlocal nobreakindent
@@ -31,7 +31,7 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal expandtab
+setlocal noexpandtab
 if &filetype != 'javascript'
 setlocal filetype=javascript
 endif
@@ -98,7 +98,7 @@ endif
 setlocal tabstop=6
 setlocal tagcase=
 setlocal tags=
-setlocal textwidth=190
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
 setlocal undolevels=-123456
@@ -107,13 +107,40 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-8,15fold
-let s:l = 8 - ((7 * winheight(0) + 14) / 28)
+4,6fold
+8,10fold
+12,14fold
+16,21fold
+24,26fold
+29,32fold
+34,46fold
+48,52fold
+84,89fold
+57,92fold
+94,96fold
+97,99fold
+103,137fold
+139,142fold
+144,153fold
+155,168fold
+170,172fold
+175,200fold
+202,208fold
+210,215fold
+217,222fold
+224,226fold
+232,252fold
+261,274fold
+57
+normal! zo
+57
+normal! zc
+let s:l = 261 - ((167 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 01|
+261
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

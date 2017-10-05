@@ -3,6 +3,7 @@ var passgen = require('./passgen.js');
 var launcher = require('./launcher.js');
 var exceptions = require('./exceptions.js');
 var buzutils = require('./buzutils.js');
+var miscutils = require('./miscutils.js');
 
 function _JsCloak() {
    this.utils = utils;
@@ -10,6 +11,7 @@ function _JsCloak() {
    this.launcher = launcher;
    this.exceptions = exceptions;
    this.buzutils = buzutils;
+   this.miscutils = miscutils;
 }
 
 //TODO: we can't pass arguments this way
