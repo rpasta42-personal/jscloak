@@ -59,7 +59,8 @@ function genCHBSPass(options, dict) {
 		if (len >= o.minLength && len <= o.maxLength)
 			return pass;
 	}
-	var msg = 'Could not generate password with given dictionary.'; 
+
+	var msg = 'Could not generate password with given dictionary.';
 	msg = utils.sprintf('%s %i words, minLen:%i, maxLen:%i',
 							  msg, o.numWords, o.minLength, o.MaxLength);
 	throwExc('CHBSPassLen', msg);

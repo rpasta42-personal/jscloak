@@ -2,16 +2,18 @@ var utils = require('./utils.js');
 var passgen = require('./passgen.js');
 var launcher = require('./launcher.js');
 var exceptions = require('./exceptions.js');
+var buzutils = require('./buzutils.js');
 
 function _JsCloak() {
    this.utils = utils;
    this.passgen = passgen;
-	this.launcher = launcher;	
-	this.exceptions = exceptions;
+   this.launcher = launcher;
+   this.exceptions = exceptions;
+   this.buzutils = buzutils;
 }
 
 //TODO: we can't pass arguments this way
-var JsCloak = new _JsCloak(); 
+var JsCloak = new _JsCloak();
 
 (function () {
    var root = this;
