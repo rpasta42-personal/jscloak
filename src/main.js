@@ -29,6 +29,6 @@ var JsCloak = new _JsCloak();
    else
       root.JsCloak = JsCloak;
 
-   window.jscloak = jscloak;
+   window.jscloak = JsCloak;
 })();
 
