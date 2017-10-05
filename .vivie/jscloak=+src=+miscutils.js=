@@ -2,7 +2,7 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 setlocal keymap=
 setlocal noarabic
-setlocal noautoindent
+setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
 setlocal nobreakindent
@@ -107,40 +107,42 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-4,6fold
-8,10fold
-12,14fold
-16,21fold
-24,26fold
-29,32fold
-34,46fold
-48,52fold
-84,89fold
-57,92fold
-94,96fold
-97,99fold
-103,137fold
-139,142fold
-144,153fold
-155,168fold
-170,172fold
-175,200fold
-202,208fold
-210,215fold
-217,222fold
-224,226fold
-232,252fold
-261,274fold
-57
+5,7fold
+9,11fold
+13,15fold
+17,22fold
+25,27fold
+30,33fold
+35,47fold
+49,53fold
+85,90fold
+58,93fold
+95,97fold
+98,100fold
+104,138fold
+140,143fold
+145,154fold
+156,169fold
+171,173fold
+176,201fold
+203,209fold
+211,216fold
+218,223fold
+225,227fold
+233,253fold
+262,275fold
+58
 normal! zo
-57
+58
 normal! zc
-let s:l = 261 - ((167 * winheight(0) + 28) / 56)
+233
+normal! zo
+let s:l = 244 - ((240 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-261
-normal! 0
+244
+normal! 05|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

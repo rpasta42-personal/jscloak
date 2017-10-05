@@ -241,7 +241,7 @@ function _MiscUtils() {
    this.reqData = reqData;
    this.getData = getData;
    this.getApiData = getApiData;
-   this.getApiDataJ = getApiDataJ;
+   //this.getApiDataJ = getApiDataJ;
    this.postApiData = postApiData;
    this.redirect = redirect;
    this.enum_helper = enum_helper;
